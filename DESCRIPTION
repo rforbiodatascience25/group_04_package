@@ -1,0 +1,31 @@
+Package: dogmolr
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R:
+  c(person(given = "Thea",
+           family = "Rehm Rosholm",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s225019@dtu.dk"),
+    person(given = "Tilman",
+           family = "Johannes Nelissen",
+           role = "aut"
+           email = "s233043@dtu.dk"),
+    person(given = "Nithiyashri",
+           family = "Jayashankar",
+           role = "aut"
+           email = "s244356@dtu.dk"),
+    person(given = "Edir",
+           family = "Sebastian Vidal Castro",
+           role = "aut"
+           email = "s243564@dtu.dk"), 
+    person(given = "Morten",
+           family = "Orebo Holmström",
+           role = "aut",
+           email = "s242223@dtu.dk"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
