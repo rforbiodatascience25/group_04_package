@@ -5,22 +5,22 @@ Version: 0.1.0
 Authors@R:
   c(person(given = "Thea",
            family = "Rehm Rosholm",
-           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           role = c("aut", "cre"),
            email = "s225019@dtu.dk"),
     person(given = "Tilman",
            family = "Johannes Nelissen",
-           role = "aut"
+           role = "aut",
            email = "s233043@dtu.dk"),
     person(given = "Nithiyashri",
            family = "Jayashankar",
-           role = "aut"
+           role = "aut",
            email = "s244356@dtu.dk"),
     person(given = "Edir",
            family = "Sebastian Vidal Castro",
-           role = "aut"
+           role = "aut",
            email = "s243564@dtu.dk"), 
     person(given = "Morten",
-           family = "Orebo Holmström",
+           family = "Orebo Holmstrom",
            role = "aut",
            email = "s242223@dtu.dk"))
 Maintainer: The package maintainer <yourself@somewhere.net>
@@ -32,3 +32,6 @@ LazyData: true
 Depends: 
     R (>= 2.10)
 RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
