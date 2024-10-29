@@ -5,7 +5,7 @@ Version: 0.1.0
 Authors@R:
   c(person(given = "Thea",
            family = "Rehm Rosholm",
-           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           role = c("aut", "cre"),
            email = "s225019@dtu.dk"),
     person(given = "Tilman",
            family = "Johannes Nelissen",
