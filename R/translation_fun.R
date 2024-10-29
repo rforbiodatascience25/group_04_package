@@ -1,6 +1,6 @@
 #' Translation Function
 #'
-#' @param codons String vector with codons, separated by a comma (?)
+#' @param codons String vector with codons, separated by a comma ?
 #'
 #' @return Returns a string with the amino acid sequence based on the vector given.
 #' @export
