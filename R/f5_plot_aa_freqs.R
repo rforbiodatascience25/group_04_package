@@ -3,7 +3,7 @@
 #' Title: Plotting amino acid frequency
 #'
 #' @import ggplot2
-#' @import From stringr str_split boundary str_count
+#' @importFrom stringr str_split boundary str_count
 #'
 #' @param aa_sequence An amino acid seqence of any length.
 #'
