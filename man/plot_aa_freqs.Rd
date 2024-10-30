@@ -2,18 +2,18 @@
 % Please edit documentation in R/f5_plot_aa_freqs.R
 \name{plot_aa_freqs}
 \alias{plot_aa_freqs}
-\title{Title: Plotting amine acid frequency}
+\title{Title: Plotting amino acid frequency}
 \usage{
 plot_aa_freqs(aa_sequence)
 }
 \arguments{
-\item{aa_sequence}{an amino acid seqence of any length.}
+\item{aa_sequence}{An amino acid seqence of any length.}
 }
 \value{
-returns colored box plot with counts for each appearing amino acid.
+Returns colored box plot with counts for each appearing amino acid.
 }
 \description{
-Title: Plotting amine acid frequency
+Title: Plotting amino acid frequency
 }
 \examples{
 plot_aa_freqs("AGSLYVDHK")
