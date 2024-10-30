@@ -1,10 +1,10 @@
 
 
-#' Title: Plotting amine acid frequency
+#' Title: Plotting amino acid frequency
 #'
-#' @param aa_sequence an amino acid seqence of any length.
+#' @param aa_sequence An amino acid seqence of any length.
 #'
-#' @return returns colored box plot with counts for each appearing amino acid.
+#' @return Returns colored box plot with counts for each appearing amino acid.
 #' @export
 #'
 #' @examples plot_aa_freqs("AGSLYVDHK")
@@ -31,5 +31,6 @@ plot_aa_freqs <- function(aa_sequence){
 
   return(plot)
 }
+
 
 
