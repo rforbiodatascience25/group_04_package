@@ -1,4 +1,3 @@
-#' Translation Function
 #'
 #' @param codons String vector with codons, separated by a comma
 #'
