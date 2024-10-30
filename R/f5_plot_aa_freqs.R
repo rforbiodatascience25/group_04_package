@@ -5,7 +5,7 @@
 #' @import ggplot2
 #' @importFrom stringr str_split boundary str_count
 #'
-#' @param aa_sequence An amino acid seqence of any length.
+#' @param aa_sequence An amino acid sequence of any length.
 #'
 #' @return Returns colored box plot with counts for each appearing amino acid.
 #' @export
@@ -36,6 +36,4 @@ plot_aa_freqs <- function(aa_sequence){
 
   return(plot)
 }
-
-
 

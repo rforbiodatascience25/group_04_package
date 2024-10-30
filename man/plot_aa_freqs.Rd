@@ -7,7 +7,7 @@
 plot_aa_freqs(aa_sequence)
 }
 \arguments{
-\item{aa_sequence}{An amino acid seqence of any length.}
+\item{aa_sequence}{An amino acid sequence of any length.}
 }
 \value{
 Returns colored box plot with counts for each appearing amino acid.
