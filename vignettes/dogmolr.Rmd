@@ -24,7 +24,7 @@ The package `dogmolr` imitates the steps of the central dogma of molecular biolo
 
 Specifically what is covered is the steps of transcription and translation. By using the package, it is possible to generate a DNA sequence and end op with a box plot showing the recurrences of the amino acids in the corresponding amino acid sequence.
 
-The different functions in the package are meant to be used in a step by step fashion: 1. sample_nt_seq 2. dna_to_rna 3. r2c 4. transl_RNA_2_AA 5. plot_aa_freqs
+The different functions in the package are meant to be used in a step by step fashion: 1. sample_nt_seq 2. dna_to_rna 3. r2c 4. transl_RNA_2_AA 5. plot_aa_freqs.
 
 First, a DNA sequence is generated and subsequently transcribed to RNA. The RNA sequence is then split by another function into codons. The codons are then translated to amino acids and lastly the frequencies of each appertaining amino acid in the generated peptide sequence is plotted in a bar plot. The package dependencies `ggplot2` and `stringr` were added by the `usethis::usepackage()`. Though it would be nice not to include any dependencies at all due to potential conflicts of package versions we need to in this package to manipulate the strings and to make proper plots.
 
