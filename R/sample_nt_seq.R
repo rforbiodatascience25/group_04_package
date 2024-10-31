@@ -9,7 +9,7 @@
 #'
 #'
 
-sample_nt_seq <- function(seq_length){
+sample_nt_seq <- function(seq_length = 99){
   sample_nt <- sample(c("A", "T", "G", "C"), size = seq_length, replace = TRUE)
   nt_seq <- paste0(sample_nt, collapse = "")
   return(nt_seq)
