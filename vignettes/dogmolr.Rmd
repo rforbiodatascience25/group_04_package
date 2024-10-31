@@ -17,3 +17,89 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(dogmolr)
 ```
+
+
+### Introduction
+The package "dogmolr" imitate the steps of the central dogma.
+
+Specifically what is covered is the steps of transcription and translation.
+By using the package it is possible to generate a DNA sequence and end op with a box plot showing the recurrences of the amino acids in the corresponding amino acid sequence.
+
+The different functions in the package are meant to be used in a step by step fashion:
+1. sample_nt_seq
+2. dna_to_rna
+3. r2c
+4. transl_RNA_2_AA
+5. plot_aa_freqs
+
+You start by generating a DNA sequence, then transcribe it to RNA.
+The RNA sequence is then split by another function into codons. The Codons are then translated to amino acids and lastly the frequencies of each appertaining amino acid can be plotted in a box plot. 
+
+### Functions
+## 1: sample_nt_seq
+The functions is used to generate a DNA sequences of any length. 
+
+# Example of usage
+```{r}
+dna_seq <- sample_nt_seq(30)
+dna_seq
+```
+
+# Input arguments and expected output
+Desired length of DNA sequence is taken as input, if non is given the standard length is set to 99.
+Expected output is a DNA sting of given length.
+
+## 2: dna_to_rna
+Translate a DNA string into a RNA string
+
+# Example of usage
+```{r}
+RNA_seq <- dna_to_rna(dna_seq)
+RNA_seq
+```
+
+# Input arguments and expected output
+The function input is a DNA string of anny length. 
+Output is the resulting RNA string of given DNA segment. 
+
+## 3: r2c
+Splits an RNA string into subsisting's of its codons (e.g. ATG, GCC etc.). 
+
+# Example of usage
+```{r}
+codons_vec <- r2c(RNA_seq)
+codons_vec
+```
+
+# Input arguments and expected output
+A RNA string is given as input, additionally the start posision for translation can be given (defult start position is 1).
+The output is codons separated into individual strings. 
+
+## 4: transl_RNA_2_AA
+Translates list of codons into amino acids
+
+# Example of usage
+```{r}
+AA_seq <- transl_RNA_2_AA(codons_vec)
+AA_seq
+```
+
+# Input arguments and expected output
+As input the function requress a string vector containing codons.
+Output is a single string of the amino acids translated from the codons.
+
+## 5: plot_aa_freqs
+Plots the frequencies of amino acids as a box plot.
+
+# Example of usage
+```{r}
+AA_freq_plot <- plot_aa_freqs(AA_seq)
+AA_freq_plot
+```
+
+# Input arguments and expected output
+Takes a string of amino acids.
+Returns a box plot showing frequencies of the different amino acids in said string. 
+
+### Use cases:
+
