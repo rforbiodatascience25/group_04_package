@@ -110,7 +110,6 @@ The generated RNA sequence can the be split up into codons by the function `r2c`
 These codons can the be translated into the amino acids they encode for by the function `transl_RNA_2_AA` and the frequency of the different amino acids in the peptide sequence can be shown in a barplot using the `plot_aa_freqs` function. 
 It should be noted that the function `dna_to_rna` does not generate the complimentary RNA sequence of the input DNA sequence. Thus, the package cannot be used to generate the peptide sequence from a DNA sequence. For that one would need to implement a function which converts the DNA sequence to the complimentary RNA sequence which is then used in the `rna_to_codons` function and further downstream. The code could look like this
 
-```{r}
 dna_to_compl_rna <- function(dna_seq) {
   if (!is.character(dna_seq)) {
     print("Input DNA sequence should be a string")
@@ -126,8 +125,6 @@ dna_to_compl_rna <- function(dna_seq) {
 }
 
 
-dna_to_compl_rna("ACCCAAATCGGATCA")
-```
 
 
 Additionally, one would need to implement a function which detects the start and stop codons in the provided nucleotide strand as this would alter the generated peptide sequence.
