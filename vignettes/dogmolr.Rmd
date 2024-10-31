@@ -18,6 +18,8 @@ knitr::opts_chunk$set(
 library(dogmolr)
 ```
 
+Github Repository: <https://github.com/rforbiodatascience24/group_04_package>
+
 ### Introduction
 
 The package `dogmolr` imitates the steps of the central dogma of molecular biology by functions that mimic the steps in the translation of DNA to amino acids.
