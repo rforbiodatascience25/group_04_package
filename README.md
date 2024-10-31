@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of dogmolr is to …
+The goal of dogmolr is to represent the central dogma of molecular
+biology.
 
 ## Installation
 
