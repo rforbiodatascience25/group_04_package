@@ -1,0 +1,19 @@
+---
+title: "dogmolr"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{dogmolr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(dogmolr)
+```
