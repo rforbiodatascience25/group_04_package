@@ -20,13 +20,13 @@ library(dogmolr)
 
 ### Introduction
 
-The package `dogmolr` imitates the steps of the central dogma of molecular biology by functions that mimic the steps in the translation of DNA to aminoacids.
+The package `dogmolr` imitates the steps of the central dogma of molecular biology by functions that mimic the steps in the translation of DNA to amino acids.
 
-Specifically what is covered is the steps of transcription and translation. By using the package, it is possible to generate a DNA sequence and end op with a box plot showing the recurrences of the aminoacids in the corresponding aminoacid sequence.
+Specifically what is covered is the steps of transcription and translation. By using the package, it is possible to generate a DNA sequence and end op with a box plot showing the recurrences of the amino acids in the corresponding amino acid sequence.
 
 The different functions in the package are meant to be used in a step by step fashion: 1. sample_nt_seq 2. dna_to_rna 3. r2c 4. transl_RNA_2_AA 5. plot_aa_freqs
 
-First, a DNA sequence is generated and subsequently transcribed to RNA. The RNA sequence is then split by another function into codons. The codons are then translated to aminoacids and lastly the frequencies of each appertaining aminoacid in the generated peptide sequence is plotted in a bar plot. The package dependencies `ggplot2` and `stringr` were added by the `usethis::usepackage()`. Though it would be nice not to include any dependencies at all due to potential conflicts of package versions we need to in this package to manipulate the strings and to make proper plots.
+First, a DNA sequence is generated and subsequently transcribed to RNA. The RNA sequence is then split by another function into codons. The codons are then translated to amino acids and lastly the frequencies of each appertaining amino acid in the generated peptide sequence is plotted in a bar plot. The package dependencies `ggplot2` and `stringr` were added by the `usethis::usepackage()`. Though it would be nice not to include any dependencies at all due to potential conflicts of package versions we need to in this package to manipulate the strings and to make proper plots.
 
 The stringr functions were loaded in NAMESPACE via e.g `importFrom(stringr,str_count)` so that they were easily callable within the package code as `str_count()`, instead of having to clarify that e.g. `stringr::str_count` should be used. This makes for a more readable code and faster development, especially if the package was larger.
 
@@ -109,7 +109,7 @@ Takes a string of amino acids. Returns a bar plot showing frequencies of the dif
 
 ### Use cases:
 
-The package can be used to translate a provided RNA sequence into a peptide sequence and graphically show the frequencies of the different aminoacids in the generated peptide sequence. The user of the package can chose to generate a random nucleotide sequence of a given length using the function `sample_nt_seq`. This sequence can the be converted (not translated) into an RNA-sequence by the function `dna_to_rna`. The generated RNA sequence can the be split up into codons by the function `r2c`. These codons can the be translated into the aminoacids they encode for by the function `transl_RNA_2_AA` and the frequency of the different aminoacids in the peptide sequence can be shown in a barplot using the `plot_aa_freqs` function. It should be noted that the function `dna_to_rna` does not generate the complimentary RNA sequence of the input DNA sequence. Thus, the package cannot be used to generate the peptide sequence from a DNA sequence. For that, one would need to implement a function which converts the DNA sequence to the complimentary RNA sequence which is then used in the `rna_to_codons` function and further downstream. The code could look like this
+The package can be used to translate a provided RNA sequence into a peptide sequence and graphically show the frequencies of the different amino acids in the generated peptide sequence. The user of the package can chose to generate a random nucleotide sequence of a given length using the function `sample_nt_seq`. This sequence can the be converted (not translated) into an RNA-sequence by the function `dna_to_rna`. The generated RNA sequence can the be split up into codons by the function `r2c`. These codons can the be translated into the amino acids they encode for by the function `transl_RNA_2_AA` and the frequency of the different amino acids in the peptide sequence can be shown in a barplot using the `plot_aa_freqs` function. It should be noted that the function `dna_to_rna` does not generate the complimentary RNA sequence of the input DNA sequence. Thus, the package cannot be used to generate the peptide sequence from a DNA sequence. For that, one would need to implement a function which converts the DNA sequence to the complimentary RNA sequence which is then used in the `rna_to_codons` function and further downstream. The code could look like this
 
 ```{r}
 dna_to_compl_rna <- function(dna_seq) {
