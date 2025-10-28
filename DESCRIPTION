@@ -9,19 +9,19 @@ Authors@R:
            email = "s253700@dtu.dk"), 
       person(given = "Lucía",
            family = "López Rosales",
-           role = c("aut", "cre"), 
+           role = c("aut"), 
            email = "s253704@dtu.dk"),
       person(given = "Diego",
            family = "Medina Castelló",
-           role = c("aut", "cre"), 
+           role = c("aut"), 
            email = "s253699@dtu.dk"),
       person(given = "Eric",
            family = "Calaveras Ramis",
-           role = c("aut", "cre"), 
+           role = c("aut"), 
            email = "s253696@dtu.dk"),
       person(given = "Beatriz",
            family = "García Remesaal",
-           role = c("aut", "cre"), 
+           role = c("aut"), 
            email = "s253694@dtu.dk")
            )
 Description: More about what it does (maybe more than one line).
@@ -29,3 +29,7 @@ Description: More about what it does (maybe more than one line).
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
