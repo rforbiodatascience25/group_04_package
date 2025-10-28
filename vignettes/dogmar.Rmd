@@ -1,0 +1,92 @@
+---
+title: "dogmar: A guide"
+author: s253700, s253704, s253699, s253694, s253696
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{dogmar: A guide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+::: {style="text-align: center;"}
+# DogmaR User guide
+:::
+
+**GitHub Repository:** [dogmar](https://github.com/rforbiodatascience25/group_04_package)
+
+```{r, include = FALSE}
+# 
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+**Package description** It is a package that allows you to translate a randomly generated DNA sequence into proteins. It also allows you to perform a brief analysis of protein composition.
+
+```{r setup}
+library(dogmar)
+```
+
+::: {style="text-align: center;"}
+## Functions
+:::
+
+## create_dna(length)
+
+This function creates a random DNA sequence of a specific length determined by the parameter "length" Argument:
+
+-   length: Specify the length of the output random DNA sequence
+
+```{r}
+dna <- create_dna(50)
+print(f"The randomly generated DNA sequence is: {dna}")
+print(f"The length of the DNA sequence is:{len(dna)}")
+print(len(dna))
+```
+
+## to_rna(dna)
+
+This function takes a DNA sequence as input and converts it into the corresponding RNA sequence by replacing all occurrences of thymine ("T") with uracil ("U"). Argument:
+
+-   dna:A character string representing a DNA sequence (e.g., "ATGC")
+
+```{r}
+rna <- to_rna(dna)
+print(f"The DNA sequence is: {dna}")
+print(f"The RNA sequence is: {rna}")
+```
+
+## split_codons(rna, start)
+
+This function takes a RNA sequence as input and converts it into a character vector where each component is a codon of 3 bases. Argument:
+
+-   rna:A character string representing a RNA sequence (e.g., "AUGC")
+-   start: An integer (1-3) that specifies the starting position for the reading frame within the RNA sequence
+
+```{r}
+codons <- split_codons(rna, start=1)
+print(f"The RNA sequence is: {rna}")
+print(f"The codons are: {codons}")
+```
+
+## to_protein()
+
+The to_protein function takes the triplets sequences of RNA (codons) and translate them into its protein sequence. Argument:
+
+-   codons: A character string representing a the codon sequences (e.g., "ATG", "UGG", "AUG")
+
+```{r}
+protein <- to_protein(codons)
+print(f"The RNA sequence is: {rna}")
+print(f"The codons are: {codons}")
+print(f"The protein is: {protein}")
+```
+
+## dependencies()
+
+Tras terminar de hacerlo debo ejecutar devtools::build_vignettes(): esto crea el pdf que tenemos que entregar el DTU learn
+
+usethis::use_readme_rmd(open = TRUE) que crea el file README.Rdm: pegar el vignette y tal y cambiarlo a rmarkdown::github_document
+
+luego runear devtools::build_readme() y y hacer un push en github
