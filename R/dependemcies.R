@@ -1,6 +1,4 @@
 #' aa_count
-#' @import ggplot2 gplot aes geom_col theme_bw theme
-#' @importFrom stringr str_split boundary str_count
 #'
 #' @param Amino_acid A character string containing a single amino acid sequence.
 #' @param Unique_aa Set of unique amino acids present
